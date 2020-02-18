@@ -224,8 +224,9 @@ i {
         padding: 1.5rem;
     }
 
-    .dice {
-        width: 9rem;
+    .dice1,
+    .dice2 {
+        width: 8rem;
     }
 
     .player-score {
@@ -275,7 +276,8 @@ i {
         padding: 1rem;
     }
 
-    .dice {
+    .dice1,
+    .dice2 {
         width: 6rem;
     }
 
@@ -285,6 +287,14 @@ i {
 
      i {
         font-size: 1.5rem;
+    }
+
+    .input-field {
+        width: 30%;
+    }
+
+    label {
+        font-size: 1.2rem;
     }
 
 }
