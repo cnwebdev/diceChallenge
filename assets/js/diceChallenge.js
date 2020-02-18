@@ -10,7 +10,7 @@ activePlayer = 0;
 winningScore = 30;
 
 // Sellect DOM Elements
-let num = document.getElementById('gameScore');
+let num = document.getElementById('input-field');
 
 // Set Game Winning Number Function
 num.addEventListener('keypress', function (key) {
@@ -114,7 +114,7 @@ const init = () => {
   activeScore = 0;
   gamePlaying = true;
   activePlayer = 0;
-  document.getElementById('num').textContent = winningScore;
+  document.getElementById('gameScore').textContent = winningScore;
   document.getElementById('score-0').textContent = 0;
   document.getElementById('score-1').textContent = 0;
   document.getElementById('current-0').textContent = 0;
