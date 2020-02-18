@@ -6,16 +6,16 @@
 3. Add one more dice to the game so that there are two dices to play. The player looses his current score when on of the dices is 1.
 
 ## Start the game here
-[Click to start](https://monksedo.github.io/diceChanllenge/)
+[Click to start](https://monksedo.github.io/diceChallenge/)
 
 ## Technology Used
 HTML, CSS, and Javascript
 
 ## New JavaScript Verion
-[View New Version](assets/js/dicegameNew.js)
+[View New Version](assets/js/diceChallenge.js)
 
-## Earlier JavaScript Code Implementation
-[View Code](assets/js/dicegame.js)
+## Prvious Implementation
+[View Code](assets/js/dicegameNew.js)
 ### Code Snippet
 ![Code block 1](assets/img/diceCode01.png)
 
