@@ -48,7 +48,6 @@ document.querySelector('.btn-roll').addEventListener('click', () => {
       scores[activePlayer] = 0;
       totalScore.textContent = 0;
       console.log(scores[activePlayer]);
-      console.log(dice1, dice2);
       switchPlayer();
     } else if (dice1 === 1 || dice2 === 1) {
       switchPlayer();
@@ -93,14 +92,13 @@ document.querySelector('.btn-hold').addEventListener('click', () => {
 
 // Function - switch players
 const switchPlayer = () => {
-  // Sellect current user
+  // Sellect current score element
   let actScore = document.getElementById('current-' + activePlayer);
 
-  // Next Player
+  // Set next active player
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
 
-  // Reset activeScore to 0, and lastRoll score
-  lastRoll = 0;
+  // Reset activeScore and lastRoll score
   activeScore = 0;
   actScore.textContent = activeScore;
   console.log(activeScore);
@@ -113,7 +111,6 @@ const switchPlayer = () => {
 // Reset all game score on load or function call
 const init = () => {
   scores = [0, 0];
-  lastRoll = 0;
   activeScore = 0;
   gamePlaying = true;
   activePlayer = 0;
