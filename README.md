@@ -28,8 +28,8 @@ HTML, CSS, and Javascript
 
 ### Game Start Screen Shots
 ![Game Start](assets/img/diceGame04.png)
-### Score
+### Game in progress
 ![Game in progress](assets/img/diceGame05.png)
-### Winner
+### Player 1 loss all point with two 6
 ![Player 1 loss all point with two 6](assets/img/diceGame06.png)
 
