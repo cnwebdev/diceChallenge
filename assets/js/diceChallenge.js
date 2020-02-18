@@ -10,7 +10,7 @@ activePlayer = 0;
 winningScore = 30;
 
 // Sellect DOM Elements
-let num = document.getElementById('win-score');
+let num = document.getElementById('gameScore');
 
 // Set Game Winning Number Function
 num.addEventListener('keypress', function (key) {
@@ -18,7 +18,7 @@ num.addEventListener('keypress', function (key) {
     if (num.value >= 30 && key.keyCode === 13) {
       console.log(key.keyCode);
       winningScore = num.value;
-      document.getElementById('num').textContent = winningScore;
+      document.getElementById('gameScore').textContent = winningScore;
       console.log(num.value);
     }
   }
