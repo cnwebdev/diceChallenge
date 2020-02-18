@@ -126,7 +126,8 @@ button {
 
 .newGameBox {
     margin-top: 3rem;
-    height: 10rem;
+    height: 12rem;
+    width: 12rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,6 +153,7 @@ span {
 
 .btn-roll-hold {
     height: 13rem;
+    width: 12rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,12 +163,13 @@ span {
 
 .input-box {
    font-size: 1.6rem;
-   width: 37%;
    display: flex;
    flex-direction: column;
+   align-items: center;
 }
 
 .input-field {
+    width: 100%;
     padding: 5px 5px;
     border: 1px solid #EB4D4D;
 }
@@ -210,6 +213,16 @@ i {
          height: 60rem;
      }
 
+     .newGameBox {
+         height: 9rem;
+         width: 12rem;
+     }
+
+     .btn-roll-hold {
+         height: 10rem;
+         width: 10rem;
+     }
+
     .player-name {
         font-size: 3rem;
     }
@@ -243,19 +256,35 @@ i {
 }
 
 @media screen and (max-width: 600px) {
+    .wrapper {
+         height: 50rem;
+     }
+
     h1 {
         font-size: 2rem;
         letter-spacing: .3rem;
     }
 
-    .winnerNum, #num {
+    .newGameBox {
+         height: 7rem;
+         width: 10rem;
+     }
+
+    .btn-roll-hold {
+         height: 9rem;
+         width: 10rem;
+     }
+
+    .input-field {
+        width: 80%;
         display: block;
         font-size: 1.2rem;
     }
 
-    .wrapper {
-         height: 50rem;
-     }
+
+    .gameScore {
+        font-size: 1.2rem;
+    }
 
     .player-score {
         font-size: 4rem;
@@ -291,10 +320,6 @@ i {
 
      i {
         font-size: 1.5rem;
-    }
-
-    .input-field {
-        width: 30%;
     }
 
     label {
