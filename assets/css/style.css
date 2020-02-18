@@ -35,7 +35,7 @@ h1 {
     margin: 2rem auto;
     display: flex;
     width: 90%;
-    height: 60rem;
+    height: 70rem;
     background-color: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
 }
@@ -75,8 +75,9 @@ h1 {
     margin-bottom: 4rem;
 }
 
-.dice {
-    width: 12rem;
+.dice1,
+.dice2 {
+    width: 10rem;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
@@ -202,7 +203,7 @@ i {
         font-size: 2rem;
     }
      .wrapper {
-         height: 50rem;
+         height: 60rem;
      }
 
     .player-name {
@@ -248,7 +249,7 @@ i {
     }
 
     .wrapper {
-         height: 40rem;
+         height: 50rem;
      }
 
     .player-score {
