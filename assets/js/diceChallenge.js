@@ -4,11 +4,27 @@
 
 // Set global veriables
 let scores = [0, 0];
-let activeScore, activePlayer, lastRoll;
+let activeScore, activePlayer, lastRoll, winningScore;
 activeScore = 0;
 activePlayer = 0;
 lastRoll = 0;
+winningScore = 30;
 
+// Sellect DOM Elements
+let num = document.getElementById('win-score');
+
+// Set Game Winning Number Function
+num.addEventListener('keypress', function (key) {
+  // if (num.value < 30) {
+  //   alert('Plaese enter game score of 30 or higher');
+  // }
+  if (num.value >= 30 && key.keyCode === 13) {
+    console.log(key.keyCode);
+    winningScore = num.value;
+    document.getElementById('num').textContent = winningScore;
+    console.log(num.value);
+  }
+});
 
 // Function - rollTheDice
 document.querySelector('.btn-roll').addEventListener('click', () => {
@@ -66,7 +82,7 @@ document.querySelector('.btn-hold').addEventListener('click', () => {
     totalScore.textContent = scores[activePlayer];
 
     // Check total score and select winner
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= winningScore) {
       // Deplay the Winner Band
       winner.textContent = 'Winner!';
       gamePlaying = false;
@@ -107,12 +123,13 @@ const init = () => {
   activeScore = 0;
   gamePlaying = true;
   activePlayer === 1 ? activePlayer = 0 : activePlayer = 0;
-  document.querySelector('#score-0').textContent = 0;
-  document.querySelector('#score-1').textContent = 0;
-  document.querySelector('#current-0').textContent = 0;
-  document.querySelector('#current-1').textContent = 0;
-  document.querySelector('#name-0').textContent = 'Player 1';
-  document.querySelector('#name-1').textContent = 'Player 2';
+  document.getElementById('num').textContent = winningScore;
+  document.getElementById('score-0').textContent = 0;
+  document.getElementById('score-1').textContent = 0;
+  document.getElementById('current-0').textContent = 0;
+  document.getElementById('current-1').textContent = 0;
+  document.getElementById('name-0').textContent = 'Player 1';
+  document.getElementById('name-1').textContent = 'Player 2';
   document.querySelector('.player-0-panel').classList.remove('winner');
   document.querySelector('.player-1-panel').classList.remove('winner');
   document.querySelector('.player-0-panel').classList.remove('active');

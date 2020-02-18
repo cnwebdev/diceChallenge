@@ -1,7 +1,7 @@
 # ROLL THE DICE GAME - CHALLENGE
 ## JavaScript assignment - Change the game to follow these rules:
 
-1. A Player looses his/her Entire score when he rolls two 6 in a row, then next player take turn
+1. A Player looses his/her ENTIRE score when rolls two 6 in a roll, then next player takes turn
 2. Add an input field to the HTML to allow players to set the game's winning score
 3. Add one more dice to the game so that there are two dices to play. The player looses his current score when on of the dices is 1.
 
