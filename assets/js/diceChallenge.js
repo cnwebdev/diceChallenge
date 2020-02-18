@@ -4,10 +4,9 @@
 
 // Set global veriables
 let scores = [0, 0];
-let activeScore, activePlayer, lastRoll, winningScore;
+let activeScore, activePlayer, winningScore;
 activeScore = 0;
 activePlayer = 0;
-lastRoll = 0;
 winningScore = 30;
 
 // Sellect DOM Elements
@@ -15,14 +14,13 @@ let num = document.getElementById('win-score');
 
 // Set Game Winning Number Function
 num.addEventListener('keypress', function (key) {
-  // if (num.value < 30) {
-  //   alert('Plaese enter game score of 30 or higher');
-  // }
-  if (num.value >= 30 && key.keyCode === 13) {
-    console.log(key.keyCode);
-    winningScore = num.value;
-    document.getElementById('num').textContent = winningScore;
-    console.log(num.value);
+  if (gamePlaying) {
+    if (num.value >= 30 && key.keyCode === 13) {
+      console.log(key.keyCode);
+      winningScore = num.value;
+      document.getElementById('num').textContent = winningScore;
+      console.log(num.value);
+    }
   }
 });
 
@@ -34,32 +32,30 @@ document.querySelector('.btn-roll').addEventListener('click', () => {
     let totalScore = document.getElementById('score-' + activePlayer);
 
     // Get the dice random number
-    const dice = Math.floor(Math.random() * 6) + 1;
-    console.log(dice);
+    const dice1 = Math.floor(Math.random() * 6) + 1;
+    const dice2 = Math.floor(Math.random() * 6) + 1;
+    console.log(dice1, dice2);
 
     // Display the correct dice image
-    document.querySelector('.dice').style.display = 'block';
-    document.querySelector('.dice').src = 'assets/img/dice-' + dice + '.png';
+    document.querySelector('.dice1').style.display = 'block';
+    document.querySelector('.dice2').style.display = 'block';
+    document.querySelector('.dice1').src = 'assets/img/dice-' + dice1 + '.png';
+    document.querySelector('.dice2').src = 'assets/img/dice-' + dice2 + '.png';
 
     // Update the active score
-    if (dice === 6 && dice === lastRoll) {
+    if (dice1 === 6 && dice2 === 6) {
       activeScore = 0;
       scores[activePlayer] = 0;
       totalScore.textContent = 0;
       console.log(scores[activePlayer]);
-      console.log(lastRoll);
-      console.log(dice);
+      console.log(dice1, dice2);
       switchPlayer();
-    } else if (dice === 1) {
+    } else if (dice1 === 1 || dice2 === 1) {
       switchPlayer();
     } else {
       // Add Score
-      activeScore += dice;
+      activeScore += (dice1 + dice2);
       console.log(activeScore);
-
-      // Save the dice value to lastRoll
-      lastRoll = dice;
-      console.log(lastRoll);
     }
     actScore.textContent = activeScore;
   }
@@ -73,7 +69,8 @@ document.querySelector('.btn-hold').addEventListener('click', () => {
     let winner = document.getElementById('name-' + activePlayer);
 
     // Change the dice display when the dice is 1
-    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice1').style.display = 'none';
+    document.querySelector('.dice2').style.display = 'none';
 
     // Add current score to totalScore
     scores[activePlayer] += activeScore;
@@ -111,9 +108,6 @@ const switchPlayer = () => {
   // Change active player display
   document.querySelector('.player-0-panel').classList.toggle('active');
   document.querySelector('.player-1-panel').classList.toggle('active');
-
-  // Change the dice display when the dice is 1
-  // diceImage.style.display = 'none';
 }
 
 // Reset all game score on load or function call
@@ -122,7 +116,7 @@ const init = () => {
   lastRoll = 0;
   activeScore = 0;
   gamePlaying = true;
-  activePlayer === 1 ? activePlayer = 0 : activePlayer = 0;
+  activePlayer = 0;
   document.getElementById('num').textContent = winningScore;
   document.getElementById('score-0').textContent = 0;
   document.getElementById('score-1').textContent = 0;
@@ -135,7 +129,8 @@ const init = () => {
   document.querySelector('.player-0-panel').classList.remove('active');
   document.querySelector('.player-1-panel').classList.remove('active');
   document.querySelector('.player-0-panel').classList.add('active');
-  document.querySelector('.dice').style.display = 'none';
+  document.querySelector('.dice1').style.display = 'none';
+  document.querySelector('.dice2').style.display = 'none';
 }
 init();
 
