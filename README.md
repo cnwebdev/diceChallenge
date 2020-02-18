@@ -16,16 +16,20 @@ HTML, CSS, and Javascript
 
 ## Prvious Implementation
 [View Code](assets/js/dicegameNew.js)
-### Code Snippet
-![Code block 1](assets/img/diceCode01.png)
+## Code Snippet
+### Roll dice function
+![Roll Dice Function](assets/img/diceCode04.png)
 
-### Code Snippet
-![Code block 1](assets/img/diceCode02.png)
+### Update score function
+![Update score function](assets/img/diceCode05.png)
+
+### Switch player & ini() function
+![Switch player function](assets/img/diceCode06.png)
 
 ### Game Start Screen Shots
-![Game Start](assets/img/diceGame01.png)
+![Game Start](assets/img/diceGame04.png)
 ### Score
-![Game Start](assets/img/diceGame02.png)
+![Game in progress](assets/img/diceGame05.png)
 ### Winner
-![Game Start](assets/img/diceGame03.png)
+![Player 1 loss all point with two 6](assets/img/diceGame06.png)
 
