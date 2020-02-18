@@ -13,7 +13,7 @@ winningScore = 30;
 let num = document.getElementById('input-field');
 
 // Set Game Winning Number Function
-num.addEventListener('keypress', function (key) {
+num.addEventListener('keypress', (key) => {
   if (gamePlaying) {
     if (num.value >= 30 && key.keyCode === 13) {
       console.log(key.keyCode);
