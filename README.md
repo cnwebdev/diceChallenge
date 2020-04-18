@@ -6,7 +6,7 @@
 3. Add one more dice to the game so that there are two dices to play. The player looses his current score when on of the dices is 1.
 
 ## Start the game here
-[Click to start](https://monksedo.github.io/diceChallenge/)
+[Click to start](https://cnwebdev.github.io/diceChallenge/)
 
 ## Technology Used
 HTML, CSS, and Javascript
